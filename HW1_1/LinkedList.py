@@ -36,7 +36,6 @@ class LinkedList(MyList):
     
     def setitem(self, val, j):
         curr = self.head
-        i = 0
         for i in range(j):
             curr = curr.get_next()
             
