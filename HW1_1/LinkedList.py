@@ -45,10 +45,7 @@ class LinkedList(MyList):
         newNode = Node(item)
         if self.head == None: self.head = newNode
         else:
-            curr = self.head
-
-            for i in range(j-1):
-                curr = curr.get_next()
+            curr = self.getitem(j-1)
 
             if j == 0:
                 self.head = newNode
@@ -61,7 +58,7 @@ class LinkedList(MyList):
     
     def removeItem(self, j=0):
         curr = self.getitem(j)
-        
+
         if j == 0:
             self.head = curr.get_next()
             curr.set_next(None)
@@ -74,7 +71,7 @@ class LinkedList(MyList):
         self.length -= 1
     
     def printMyList(self):
-        curr = self.head
+        curr = self.head    
         while curr is not None:
             print(curr.get_data(), end=" ")
             curr = curr.get_next()
