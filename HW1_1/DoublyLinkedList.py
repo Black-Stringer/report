@@ -92,7 +92,7 @@ class DoublyLinkedList(MyList):
     def printMyList(self):
         curr = self.header
         while curr is not None:
-            print(curr.get_data(), end=" ")
+            print(curr.get_data(), end=' ')
             curr = curr.get_next()
         print("\n")
     

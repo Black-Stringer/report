@@ -58,7 +58,7 @@ class LinkedListBasedQueue(MyQueue):
     def printMyQueue(self):
         curr = self.head
         while curr is not None:
-            print("{}".format(curr.get_data()), end=" ")
+            print("{}".format(curr.get_data()), end=' ')
             curr = curr.get_next()
         print("\n")
     
