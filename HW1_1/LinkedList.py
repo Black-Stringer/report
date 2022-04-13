@@ -57,12 +57,10 @@ class LinkedList(MyList):
 
         if j == 0:
             self.head = curr.get_next()
-            curr.set_next(None)
-            curr.set_data(None)
+            del curr
         else:
             self.getitem(j-1).set_next(curr.get_next())
-            curr.set_next(None)
-            curr.set_data(None)
+            del curr
 
         self.length -= 1
     

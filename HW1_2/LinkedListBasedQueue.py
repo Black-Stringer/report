@@ -48,10 +48,10 @@ class LinkedListBasedQueue(MyQueue):
         try:
             curr = self.head
             self.head = self.head.get_next()
-            curr.data = None
-            curr.set_next(None)
+            del curr
         
             self.length -= 1
+
         except AttributeError:
             print("The queue is empty so cannot dequeue.\n")
     

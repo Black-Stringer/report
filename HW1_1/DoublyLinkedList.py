@@ -72,13 +72,13 @@ class DoublyLinkedList(MyList):
         
         if j == 0:
             self.header = curr.get_next()
-            curr.set_data(None)
+            del curr
         else:
             if self.tailer is not curr:
                 curr.get_next().set_previous(curr.get_previous())
             if self.header is not curr:
                 curr.get_previous().set_next(curr.get_next())
-            curr.set_data(None)
+            del curr
             
         self.length -= 1
     
