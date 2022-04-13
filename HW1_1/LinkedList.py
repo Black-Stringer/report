@@ -35,11 +35,7 @@ class LinkedList(MyList):
         return curr
     
     def setitem(self, val, j):
-        curr = self.head
-        for i in range(j):
-            curr = curr.get_next()
-            
-        curr.set_data(val)
+        self.getitem(j).set_data(val)
     
     def insertItem(self, item, j=0):
         newNode = Node(item)

@@ -43,20 +43,13 @@ class DoublyLinkedList(MyList):
         return curr
     
     def setitem(self, val, j):
-        curr = self.header
-        for i in range(j):
-            curr = curr.get_next()
-            
-        curr.set_data(val)
+        self.getitem(j).set_data(val)
     
     def insertItem(self, item, j=0):
         newNode = Node(item)
         if self.header == None: self.header = newNode
         else:
-            curr = self.header
-            
-            for i in range(j-1):
-                curr = curr.get_next()
+            curr = self.getitem(j-1)
                 
             if j == 0:
                 self.header = newNode
