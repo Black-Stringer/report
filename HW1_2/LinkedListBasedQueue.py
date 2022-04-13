@@ -46,10 +46,11 @@ class LinkedListBasedQueue(MyQueue):
     def dequeue(self):
         
         try:
-            curr = self.head
-            self.head = self.head.get_next()
-            del curr
-        
+            self.first()
+            nextHead = self.head.get_next()
+            del self.head
+            self.head = nextHead
+            
             self.length -= 1
 
         except AttributeError:
