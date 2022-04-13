@@ -25,7 +25,7 @@ class LinkedListBasedQueue(MyQueue):
         return self.length
     
     def first(self):
-        return self.head.get_data()
+        return self.head
     
     def is_empty(self):
         if self.len() == 0: return True
@@ -78,4 +78,4 @@ q.dequeue()
 
 q.enqueue(7)
 q.enqueue(9)
-print("A first element of queue is {}\n".format(q.first()))
+print("A first element of queue is {}\n".format(q.first().get_data()))
